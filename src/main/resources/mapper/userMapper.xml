@@ -33,13 +33,17 @@
   	USERID,
 	PASSWD,
 	USERNAME,
-	EMAIL
+	EMAIL,
+	UPOINT,
+	INDATE
   )
 	 VALUES(
 	 #{userid},
 	 #{passwd},
 	 #{username},
-	 #{email}
+	 #{email},
+	 1000,
+	 SYSDATE
 	 )
   </insert>
   
