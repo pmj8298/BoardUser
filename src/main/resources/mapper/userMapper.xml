@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.board.user.mapper.UserMapper">
-  <select id="getUserList" resultType="com.board.user.domain.UserVo">
+
+<resultMap id="getUserList" type="java.util.HashMap">
+	 <result property="userid" column="userid" />
+	 <result property="username" column="username" />
+	 <result property="email" column="email" />
+	 <result property="upoint" column="upoint" />
+	 <result property="indate" column="indate" />	
+	</resultMap>
+
+  <select id="getUserList" resultMap="getUserList">
   	SELECT     USERID, 
   	           USERNAME, 
-  	           EMAIL, 
+  	           EMAIL,   
   	           CASE
   	             WHEN UPOINT BETWEEN 8001 AND 10000 THEN 'VIP'
   	             WHEN UPOINT BETWEEN 6001 AND 8000  THEN '우수회원'
