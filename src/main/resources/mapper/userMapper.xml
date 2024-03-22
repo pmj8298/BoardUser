@@ -26,12 +26,12 @@
 	USERNAME,
 	EMAIL
   )
- VALUES(
- #{userid},
- #{passwd},
- #{username},
- #{email}
- )
+	 VALUES(
+	 #{userid},
+	 #{passwd},
+	 #{username},
+	 #{email}
+	 )
   </insert>
   
 </mapper>
