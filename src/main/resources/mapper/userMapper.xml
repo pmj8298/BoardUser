@@ -61,7 +61,16 @@
 	 SYSDATE
 	 )
   </insert>
- 
- 
+  
+  <update id="updateUser">
+   UPDATE TUSER
+     SET  USERID   = #{userid}, 
+          PASSWD   = #{passwd},
+          USERNAME = #{username},
+          EMAIL    = #{email},
+          UPOINT   = #{upoint}
+    WHERE USERID   = #{userid}
+  </update>
+  
   
 </mapper>

@@ -107,4 +107,19 @@ public class UserController {
 		return mv;
 	}
 	
+	// /Users/Update
+	@RequestMapping("/Update")
+	public ModelAndView update(UserVo userVo) {
+		
+		log.info("userVo : {}",userVo);
+		
+		// 수정하기
+		userMapper.updateUser(userVo);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Users/List");
+		
+		return mv;
+		
+	}
 }

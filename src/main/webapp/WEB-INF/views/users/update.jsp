@@ -52,7 +52,7 @@ background-color: #D0D0D0;}
      </tr>
      <tr>
      <td>포인트</td>
-     <td><input type="text" value="1000" readonly/></td>
+     <td><input type="text" name="upoint" value="${vo.upoint }"/></td>
      </tr>
      <tr>
      <td>가입일</td>
