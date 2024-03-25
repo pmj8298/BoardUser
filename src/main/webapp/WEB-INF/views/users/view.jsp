@@ -86,6 +86,7 @@ background-color: #D0D0D0;}
      
      <a class="btn btn-primary btn-sm" role="button" 
      href="/Users/UpdateForm?userid=${vo.userid}">회원수정</a>
+     
      <a class="btn btn-primary btn-sm" role="button" 
      href="/Users/Delete?userid=${vo.userid}">회원삭제</a>
      

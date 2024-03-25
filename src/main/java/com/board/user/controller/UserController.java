@@ -122,4 +122,17 @@ public class UserController {
 		return mv;
 		
 	}
+	
+	// /Users/Delete?userid=U001
+	@RequestMapping("/Delete")
+	public ModelAndView delete(UserVo userVo) {
+		
+		// 삭제하기
+		userMapper.deleteUser(userVo);
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("redirect:/Users/List");
+		
+		return mv;
+	}
 }
