@@ -30,7 +30,7 @@ public class UserController {
 	// /Users/List
 	@RequestMapping("/List")
 	public ModelAndView list() {
-		// 목록조회
+		// 사용자 목록조회
 		List<UserVo> userList = userMapper.getUserList();
 		
 		ModelAndView mv  = new ModelAndView();
@@ -89,4 +89,22 @@ public class UserController {
 		
 		return mv;
 	}
+	
+	// /Users/UpdateForm?userid=sky
+	@RequestMapping("/UpdateForm")
+	public ModelAndView updateForm(UserVo userVo) {
+		
+		// 아이디로 수정할 데이터를 조회
+		HashMap<String, Object> map = userMapper.getUser(userVo);
+		
+		// Model에 담는다
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("vo", map);
+		
+		// 이동한다
+		mv.setViewName("users/update");
+		
+		return mv;
+	}
+	
 }
