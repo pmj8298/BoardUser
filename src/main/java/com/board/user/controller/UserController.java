@@ -19,6 +19,9 @@ public class UserController {
 	
 	@Autowired
 	private UserMapper userMapper;
+	// UserMapper인터페이스를 의미함
+	// controller가 interface를 통해 xml과 연결
+	// xml은 UserMapper인터페이스를 통해 controller와 연결할거야
 	
 	// /Users/List
 	@RequestMapping("/List")
